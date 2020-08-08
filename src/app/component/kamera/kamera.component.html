@@ -1,0 +1,49 @@
+<script src="node_modules/chart.js/src/chart.js"></script>
+<div class="chart-container">
+  <div class="col-md-4 offset-md-4">
+    <h4 class="text-center">Statistika per nr e kamera bazuar ne rezolucion</h4>
+    <div style="display: block;">
+    <canvas baseChart 
+          [data]="chartTotal"
+          [labels]="chartId"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [colors]="pieChartColors">
+        </canvas>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="col-md-8 offset-md-2">
+  <label>Filtro sipas</label>
+  <input type="text" id="userInput" [(ngModel)]="data"/>
+  <button class="btn btn-info" (click)="getByRezolucion(data)">Rezolucion</button>
+  <button class="btn btn-info" (click)="getByIp(data)">Ip</button>
+  <button class="btn btn-info" (click)="getByEmer(data)">Emer</button>
+  <button class="btn btn-info" (click)="getByModel(data)">Model</button>
+  <button class="btn btn-info" (click)="getAll()">Shiko te gjitha</button>
+    <button class="btn btn-success pull-right"  (click)="addKamera()"> Shto kamera</button>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Emri</th>
+        <th>Modeli</th>
+        <th>Rezolucioni</th>
+        <th>Ip</th>
+        <th>Veprime</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let k of kamera">
+        <td>{{k.emer}}</td>
+        <td>{{k.model}}</td>
+        <td>{{k.rezolucion}}</td>
+        <td>{{k.ip}}</td>
+        <td><button class="btn btn-success pull-center" style="width:100px" (click)="delete(k.id)"> Fshi</button>
+         
+        </td> 
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,31 @@
+<div class="container">
+<form  (ngSubmit)="save()" #form="ngForm" >
+
+<button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h2 mat-dialog-title>Shto Kamera</h2>
+<mat-dialog-content>
+  <div class="form-group">
+    <label for="emer" >Emer</label><br/>
+    <input  type="text"  name="emer" class="form-control" [(ngModel)]="kamera.emer" >
+  </div>
+  <div class="form-group">
+    <label for="model" >Model</label><br/>
+    <input type="text" name="model" class="form-control" [(ngModel)]="kamera.model"  >
+  </div>
+  <div class="form-group">
+    <label for="rezolucion" >Rezolucion</label><br/>
+    <input  type="text" name="rezolucion"  class="form-control" [(ngModel)]="kamera.rezolucion" >
+  </div>
+  <div class="form-group">
+    <label for="ip" >Ip</label><br/>
+    <input  type="text" name="ip" class="form-control" [(ngModel)]="kamera.ip" >
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button type="submit" class="mat-raised-button">save</button>
+  <button type="button" class="btn btn-light" (click)="close()">Close</button>
+</mat-dialog-actions>
+</form>
+</div>

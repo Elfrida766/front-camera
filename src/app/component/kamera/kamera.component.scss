@@ -1,0 +1,26 @@
+
+@import "~bootstrap/dist/css/bootstrap.css";
+  thead{
+padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:blue;
+  color: white;
+  }
+  td, th {
+    border: 1px solid #ddd;
+  padding: 8px;
+  }
+  .table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.pull-right{
+  float:right;
+  width: 230px;
+  margin-bottom: 10px;
+}
+.btn-info{
+  margin-left: 8px;
+}
